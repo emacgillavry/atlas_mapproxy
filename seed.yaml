@@ -1,0 +1,36 @@
+seeds:
+  opdekaart_rd:
+    caches: [topo_rd_cache]
+    grids: [nl_grid]
+    coverages: ['ams']
+    levels:
+      from: 7
+      to: 14
+
+#  opdekaart_3857:
+#    caches: [topo_3857_cache]
+#    grids: [GLOBAL_WEBMERCATOR]
+#    coverages: ['ams']
+#    levels:
+#      from: 12
+#      to: 17
+
+coverages:
+  ams:
+    bbox: [4.59803,52.2465,5.16755,52.4516]
+    srs: 'EPSG:4326'
+
+cleanups:
+  remove_complete_levels_rd:
+    caches: [topo_rd_cache]
+    remove_all: true
+    levels:
+      from: 7
+      to: 16
+
+#  remove_complete_levels_3857:
+#    caches: [topo_3857_cache]
+#    remove_all: true
+#    levels:
+#      from: 12
+#      to: 19
