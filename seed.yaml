@@ -6,6 +6,14 @@ seeds:
     levels:
       from: 7
       to: 14
+      
+  lki_kot_rd:
+    caches: [lki_kot_rd_cache]
+    grids: [nl_grid]
+    coverages: ['ams']
+    levels:
+      from: 13
+      to: 16
 
 #  opdekaart_3857:
 #    caches: [topo_3857_cache]
@@ -26,6 +34,14 @@ cleanups:
     remove_all: true
     levels:
       from: 7
+      to: 16
+
+cleanups:
+  remove_complete_levels_lki_kot_rd:
+    caches: [lki_kot_rd_cache]
+    remove_all: true
+    levels:
+      from: 13
       to: 16
 
 #  remove_complete_levels_3857:
